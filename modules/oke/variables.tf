@@ -1,0 +1,9 @@
+variable compartment_id {}
+variable cluster_kubernetes_version {}
+variable oke_pb_subnet_id {}
+variable oke_pv_subnet_id {}
+variable vcn_for_oke {}
+variable np_ad {}
+variable node_image {}
+variable node_count {}
+variable node_shape {}
