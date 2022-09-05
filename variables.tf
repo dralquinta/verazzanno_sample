@@ -8,6 +8,7 @@ variable sb_pv_cidr {}
 variable sb_pb_cidr {}
 variable sb_pb_name {}
 variable sb_pv_name {}
+variable cluster_count {}
 variable "sl_icmp_public" {
   type = list(map(number))
   default = [        

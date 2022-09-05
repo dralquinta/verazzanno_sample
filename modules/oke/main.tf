@@ -1,5 +1,5 @@
 resource "oci_containerengine_cluster" "oke" {
-    count = 2
+    count = var.cluster_count
     #Required
     compartment_id = var.compartment_id
     kubernetes_version = var.cluster_kubernetes_version
@@ -34,7 +34,7 @@ resource "oci_containerengine_cluster" "oke" {
 # NODEPOOLS
 
 resource "oci_containerengine_node_pool" "oke_node_pool" {
-    count = 2
+    count = var.cluster_count
     #Required
     cluster_id = oci_containerengine_cluster.oke[count.index].id
     compartment_id = var.compartment_id

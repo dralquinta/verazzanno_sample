@@ -7,3 +7,4 @@ variable np_ad {}
 variable node_image {}
 variable node_count {}
 variable node_shape {}
+variable cluster_count {}

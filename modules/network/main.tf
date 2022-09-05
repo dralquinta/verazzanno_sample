@@ -26,6 +26,8 @@ resource "oci_core_vcn" "vcn_for_oke" {
     cidr_block = var.vcn_cidr_block
     display_name = var.vcn_display_name
     freeform_tags = {"use"= "Demo"}
+    dns_label = "okevcn"
+    # vcn_domain_name = "okevcn.oraclevcn.com"
 }
 
 # SUBNET CREATION
@@ -35,6 +37,7 @@ resource "oci_core_subnet" "oke_pb_subnet" {
     cidr_block = var.sb_pb_cidr
     compartment_id = var.compartment_id
     vcn_id = oci_core_vcn.vcn_for_oke.id
+    dns_label = "pb"
 
     #Optional
     prohibit_internet_ingress = var.pb_inet_blocked
@@ -49,6 +52,7 @@ resource "oci_core_subnet" "oke_pv_subnet" {
     cidr_block = var.sb_pv_cidr
     compartment_id = var.compartment_id
     vcn_id = oci_core_vcn.vcn_for_oke.id
+    dns_label = "pv"
 
     #Optional
     display_name = var.sb_pv_name

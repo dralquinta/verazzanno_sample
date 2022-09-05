@@ -15,7 +15,8 @@ sb_pv_cidr = "10.0.1.0/24"
 # OKE Module
 
 np_ad = "EgzC:US-ASHBURN-AD-1"
-node_image = "ocid1.image.oc1.iad.aaaaaaaabq34jg7e6v3niwwytgxloo5eges3zy4vbvdpjcb7ojtrew3edbda"
+node_image = "ocid1.image.oc1.iad.aaaaaaaammndnkjpb2fz5cjwpxhfthvx7wfcst2ihezze276lkei2cnon4vq"
+cluster_count = 3
 node_count = 2
 node_shape = {
         shape = "VM.Standard3.Flex"

@@ -16,10 +16,11 @@ module "network" {
 module "oke" {
   source = "./modules/oke"
   compartment_id = var.compartment_id
-  cluster_kubernetes_version = "v1.24.1"         
+  cluster_kubernetes_version = "v1.23.4"         
   oke_pb_subnet_id = module.network.sb_pb_id
   oke_pv_subnet_id = module.network.sb_pv_id
   vcn_for_oke = module.network.vcn_id
+  cluster_count = var.cluster_count
   np_ad = var.np_ad
   node_image = var.node_image
   node_count = var.node_count
